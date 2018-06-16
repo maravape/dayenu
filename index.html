@@ -14,42 +14,47 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
     <!--Iconos soial media-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--html in html-->
+    <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    </script>
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Dayenu</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">San Juan Argentina
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>-->
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div w3-include-html="navbar.html"></div>
 
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -75,7 +80,7 @@
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below-->
-          <div class="carousel-item" style="background-image: url('image/yogur2.jpg');background-position: center">
+          <div class="carousel-item" style="background-image: url('image/zanahoria_dor.jpg');background-position: center">
             <div class="carousel-caption d-none d-md-block">
               <!--<h3>Third Slide</h3>
               <p>This is a description for the third slide.</p>-->
@@ -96,25 +101,72 @@
     <!-- Page Content -->
     <section class="py-5">
       <div class="container">
-        <h1>Hacé tu pedido</h1>
+        <h1 class="my-4">Hacé tu pedido</h1>
         <p>Por WhatsApp al <code>+54 9 264 5806700</code>, o escribinos a <code>info@dayenu.com.ar</code>. Pactá la hora y lugar de retiro. También hacemos entregas en San Juan Capital.</p>
       </div>
+
+      <div class="container">
+
+        <!-- Introduction Row -->
+        <h1 class="my-4">O buscá tu yogur
+          <small>en los siguientes comercios!</small>
+        </h1>
+
+        <!-- Team Members Row -->
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <a rel="nofollow" target="_blank" href="https://www.facebook.com/reinohunza/">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="image/reino_hunza.png" alt="Reino de Hunza">
+            </a>
+            <h3>Reino de Hunza
+              <small>Tienda Saludable (Capital)</small>
+            </h3>
+            <p>Urquiza Sur 107, San Juan Capital</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <a rel="nofollow" target="_blank" href="https://www.facebook.com/pg/Naturalmente-851342994969401/about/?ref=page_internal">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="image/naturalmente.png" alt="Naturalmente">
+            </a>
+            <h3>Naturalmente
+              <small>Almacén Saludable</small>
+            </h3>
+            <p>Ameghino Norte 33, San Juan Capital</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <a rel="nofollow" target="_blank" href="https://www.facebook.com/pg/vikoalmacennatural/about/?ref=page_internal">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="image/viko.png" alt="">
+            </a>
+            <h3>Viko
+              <small>Almacén Natural</small>
+            </h3>
+            <p>Hermógenes Ruiz Sur 1034, San Juan Capital</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <a rel="nofollow" target="_blank" href="https://www.facebook.com/reinohunza/">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="image/reino_hunza.png" alt="Reino de Hunza">
+            </a>
+            <h3>Reino de Hunza
+              <small>Tienda Saludable (Rivadavia)</small>
+            </h3>
+            <p>Brasil Oeste 2745,  Rivadavia</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Dayenu 2018</p>
-        <p class="m-0 text-center text-white"><a href="https://www.facebook.com/yogurdayenu/" class="fa fa-facebook"></a>
-        <a href="https://www.instagram.com/dayenu_sj/?hl=de" class="fa fa-instagram"></a></p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    <div w3-include-html="footer.html"></div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+      includeHTML();
+    </script>
 
   </body>
 
