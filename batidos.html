@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://dynamothemes.com/grill/v11/recipe-detail.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dayenu</title>
+    <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/vnd.microsoft.icon">
+
+    <!---Font Icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://dynamothemes.com/grill/v11/favicon.ico">
+    <link rel="icon" href="http://dynamothemes.com/grill/v11/favicon.ico">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--html in html-->
+    <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div w3-include-html="navbar.html"></div>
+
+    <!-- Listado de recetas -->
+    <div class="top pot" id="LDR">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5><i class="fa fa-cutlery" aria-hidden="true"></i> Todas los batidos</h5>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_BAA"><img src="image/bat_avena_avellana.jpg" alt=""></a>
+                        <h3><a href="#R_BAA">Batido de avena y avellanas</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_BMC"><img src="image/bat_mango_carda.jpg" alt=""></a>
+                        <h3><a href="#R_BMC">Batido de mango con cardamomo</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Batido de avena con avellanas-->
+    <div class="recipe-detail" id="R_BAA">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>27 Jul 2017</h4>
+                    <h1 class="recipe-title">Batido de avena con avellanas</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/bat_avena_avellana.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 5 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Este nutritivo batido te brindará horas de saciedad.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Avena</a>
+                        <a href="#">Frutos secos</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        30 gr de Avena
+                                    </li>
+                                    <li>
+                                        1/2 Banana en rodajas
+                                    </li>
+                                    <li>
+                                        100 gr yogur griego
+                                    </li>
+                                    <li>
+                                        250 ml jugo de naranja sin azúcar
+                                    </li>
+                                    <li>
+                                        25 gr de avellanas
+                                    </li>
+                                    <li>
+                                        Escencia de vainilla al gusto
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Licuar bien todos los ingredientes.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>483 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>14 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>58 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>20 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Detalle Batido de mango con cardamomo-->
+    <div class="recipe-detail recipe-detail_bot" id="R_BMC">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Batido de mango con cardamomo</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/bat_mango_carda.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 5 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Refrescante, delicioso y tropical.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Fruta</a>
+                        <a href="#">Especias</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        1 mango en cubos
+                                    </li>
+                                    <li>
+                                        400 ml leche descremada
+                                    </li>
+                                    <li>
+                                        200 gr yogur griego
+                                    </li>
+                                    <li>
+                                        El interior de 2 granos de cardamomo
+                                    </li>
+                                    <li>
+                                        Hielo al gusto
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Licuar bien todos los ingredientes y servir con hielo al gusto.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>501 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>22 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>82 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>8 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div w3-include-html="footer.html"></div>
+
+    <!-- Javascript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="./Grill - Recipe Detail_files/popper.min.js.Download"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./Grill - Recipe Detail_files/select2.min.js.Download"></script>
+
+    <script src="./Grill - Recipe Detail_files/scripts.js.Download"></script>
+
+    <script>
+      includeHTML();
+    </script>
+
+</body></html>

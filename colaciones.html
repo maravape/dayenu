@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://dynamothemes.com/grill/v11/recipe-detail.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dayenu</title>
+    <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/vnd.microsoft.icon">
+
+    <!---Font Icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://dynamothemes.com/grill/v11/favicon.ico">
+    <link rel="icon" href="http://dynamothemes.com/grill/v11/favicon.ico">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--html in html-->
+    <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div w3-include-html="navbar.html"></div>
+
+    <!-- Listado de recetas -->
+    <div class="top" id="LDR">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5><i class="fa fa-cutlery" aria-hidden="true"></i> Todas las colaciones</h5>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_AVNR"><img src="image/avena_nar.jpg" alt=""></a>
+                        <h3><a href="#R_AVNR">Avena con naranja y manzana</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_ACY"><img src="image/avena_yogur.jpg" alt=""></a>
+                        <h3><a href="#R_ACY">Avena con yogur</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_BSC"><img src="image/bananasplit.jpg" alt=""></a>
+                        <h3><a href="#R_BSC">Banana split con chia</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_BBC"><img src="image/budin_banana_cacao.jpg" alt=""></a>
+                        <h3><a href="#R_BBC">Budín de banana y cacao</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_PCP"><img src="image/chocopalta.jpg" alt=""></a>
+                        <h3><a href="#R_PCP">Postre de chocopalta</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_YNM"><img src="image/nueces_miel.jpg" alt=""></a>
+                        <h3><a href="#R_YNM">Yogur griego con nueces y miel</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top pot">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box clearfix">
+                        <a href="#R_ZD"><img src="image/zanahoria_dor.jpg" alt=""></a>
+                        <h3><a href="#R_ZD">Zanahoria dorada con yogur y arándanos</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avena con naranja y manzana-->
+    <div class="recipe-detail" id="R_AVNR">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>27 Jul 2017</h4>
+                    <h1 class="recipe-title">Avena con naranja y manzana</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/avena_nar.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 10 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Excelente colación muy fácil de preparar.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Avena</a>
+                        <a href="#">Fruta</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        40 gr de Avena
+                                    </li>
+                                    <li>
+                                        100 ml agua
+                                    </li>
+                                    <li>
+                                        1 naranja en gajos por mitad
+                                    </li>
+                                    <li>
+                                        1 manzana en cubos
+                                    </li>
+                                    <li>
+                                        20 gr pasas de uva
+                                    </li>
+                                    <li>
+                                        150 gr yogur griego
+                                    </li>
+                                    <li>
+                                        1 cdta. de miel
+                                    </li>
+                                    <li>
+                                        1/2 cdta. de canela en polvo
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Mezclar bien los ingredientes y dejar refrigerado desde la noche anterior.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>521 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>30 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>88 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>4 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Avena con yogur-->
+    <div class="recipe-detail" id="R_ACY">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Avena con yogur</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/avena_yogur.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 5 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Para los que tienen prisa esta colación es ideal.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Avena</a>
+                        <a href="#">Miel</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        100 gr de avena
+                                    </li>
+                                    <li>
+                                        160 gr yogur griego
+                                    </li>
+                                    <li>
+                                        4 cdtas. de miel
+                                    </li>
+                                    <li>
+                                        Agua según consistensia deseada
+                                    </li>
+                                    <li>
+                                        Canela en polvo al gusto
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Mezclar bien todos los ingredientes.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>459 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>20 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>78 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>10 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Banana split con chía-->
+    <div class="recipe-detail" id="R_BSC">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Banana split con chía</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/bananasplit.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 10 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>El amaranto inflado en esta preparación agrega volumen y saciedad.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Fruta</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        1 cda. de semillas de chía
+                                    </li>
+                                    <li>
+                                        20 gr amaranto inflado
+                                    </li>
+                                    <li>
+                                        1/2 banana
+                                    </li>
+                                    <li>
+                                        15 gr cascarilla de cacao
+                                    </li>
+                                    <li>
+                                        150 gr de yogur griego
+                                    </li>
+                                    <li>
+                                        Agua según la consistencia deseada
+                                    </li>
+                                    <li>
+                                        Esencia de vainilla al gusto
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Mezclar el yogur griego con el agua hasta lograr la consistencia deseada.</li>
+                                    <li>Pizar la banana haciendo un puré y mezclar con el resto de los ingredientes.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>364 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>15 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>33 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>18 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Detalle Budín Banana y Cacao-->
+    <div class="recipe-detail" id="R_BBC">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Budín de banana y cacao</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/budin_banana_cacao.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 35 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 25 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Para acompañar con el mate sin sentimiento de culpa.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Fruta</a>
+                        <a href="#">Miel</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        1/2 banana
+                                    </li>
+                                    <li>
+                                        1 huevo
+                                    </li>
+                                    <li>
+                                        50 gr de yogur griego
+                                    </li>
+                                    <li>
+                                        30 gr de avena arrollada
+                                    </li>
+                                    <li>
+                                        1 cda. de almendras molidas
+                                    </li>
+                                    <li>
+                                        1/2 cdta. de cacao en polvo
+                                    </li>
+                                    <li>
+                                        1 cdta. de miel
+                                    </li>
+                                    <li>
+                                        1/2 cdta. de aceite de coco
+                                    </li>
+                                    <li>
+                                        1/2 cdta. de coco rallado
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Precalentar el horno a 180 °C (fuego medio). Engrasar un molde chico para hornear con el aceite de coco.</li>
+                                    <li>Pizar la banana y mezclar con todos los ingredientes excepto el coco rallado. Verter la mezcla en el molde y hornear durante 25 min. o hasta que el budín muestre un color marrón claro.</li>
+                                    <li>Espolvorear sobre el budín el coco rallado y servir.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>373 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>20 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>38 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>14 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Detalle Postre de chocopalta-->
+    <div class="recipe-detail" id="R_PCP">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Postre de chocopalta</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/chocopalta.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 5 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Delicioso y nutritivo, una colación fuera de serie!</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">fruta</a>
+                        <a href="#">palta</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        1/2 palta en cubos
+                                    </li>
+                                    <li>
+                                        1/2 banana en rodajas
+                                    </li>
+                                    <li>
+                                        3 dátiles sin carozo
+                                    </li>
+                                    <li>
+                                        1 cdta. mantequilla de maní
+                                    </li>
+                                    <li>
+                                        1 Cda. cacao en polvo sin azúcar
+                                    </li>
+                                    <li>
+                                        100 gr de yogur griego
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Licuar bien todos los ingredientes y refrigerar idealmente la noche anterior.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>520 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>13 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>39 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>33 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Detalle Yogur griego con nueces y miel-->
+    <div class="recipe-detail" id="R_YNM">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Yogur griego con nueces y miel</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/nueces_miel.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 5 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 0 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Una dulce colación para aplacar los antojos al instante.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Frutos secos</a>
+                        <a href="#">Miel</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        150 gr de yogur griego
+                                    </li>
+                                    <li>
+                                        30 gr de nueces picadas
+                                    </li>
+                                    <li>
+                                        4 cdtas. de miel
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Servir el yogur griego y sobre él las nuces y la miel o mezclar bien todos los ingredientes.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>477 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>12 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>25 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>35 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Detalle Zanahoria Dorada-->
+    <div class="recipe-detail recipe-detail_bot" id="R_ZD">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <h4>20 Jun 2017</h4>
+                    <h1 class="recipe-title">Zanahoria dorada con yogur y arándanos</h1>
+                </div>
+                <div class="col-lg-8">
+                    <img src="image/zanahoria_dor.jpg" alt="">
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Porciones:</p>
+                                <p><strong><i class="fa fa-users" aria-hidden="true"></i> 1 persona</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de preparación:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 20 min</strong></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <p>Tiempo de cocción:</p>
+                                <p><strong><i class="fa fa-clock-o" aria-hidden="true"></i> 10 min</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Una receta rica en fibra y muy llenadora, excelente para un desayuno, cena o colación.</p>
+                    <div class="tag">
+                        <a href="#">Yogur Griego</a>
+                        <a href="#">Vegetales</a>
+                        <a href="#">Fruta</a>
+                    </div>
+                    <div class="ingredient-direction">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Ingredientes</h3>
+                                <ul class="ingredients">
+                                    <li>
+                                        300 gr de zanahoria
+                                    </li>
+                                    <li>
+                                        150 gr yogur griego
+                                    </li>
+
+                                    <li>
+                                        150 gr de arándanos
+                                    </li>
+                                    <li>
+                                        1/2 cdta. canela en polvo
+                                    </li>
+
+                                    <li>
+                                        1 1/2 cdta. aceite de coco
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <h3>Preparación</h3>
+                                <ol class="directions">
+                                    <li>Rallar la zanahoria con un rallador en espiral.</li>
+                                    <li>Calentar en una sartén el aceite de coco y dorar la zanahoria rallada con la canela a fuego medio durante 10 min. </li>
+                                    <li>Servir con el yogur griego y los arándanos.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-facts clearfix">
+                        <h3>Tabla nutricional</h3>
+                        <div>
+                            <p>Calorías:</p>
+                            <p><strong>506 kcal</strong></p>
+                        </div>
+                        <div>
+                            <p>Proteína:</p>
+                            <p><strong>27 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Carbohidratos:</p>
+                            <p><strong>76 gr</strong></p>
+                        </div>
+                        <div>
+                            <p>Grasas:</p>
+                            <p><strong>9 gr</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center tag">
+            <a href="#LDR" class="btn btn-load" style="background-color: #d3354f"><i class="fa fa-chevron-up" style="color:white"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div w3-include-html="footer.html"></div>
+
+    <!-- Javascript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="./Grill - Recipe Detail_files/popper.min.js.Download"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./Grill - Recipe Detail_files/select2.min.js.Download"></script>
+
+    <script src="./Grill - Recipe Detail_files/scripts.js.Download"></script>
+
+    <script>
+      includeHTML();
+    </script>
+
+</body></html>
